@@ -1,1 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+
+.ds-menu  {
+
+  height: calc(100vh - 56px);
+
+  li {
+    list-style: none;
+    cursor: pointer;
+  }
+}

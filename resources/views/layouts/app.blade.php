@@ -23,9 +23,13 @@
     <div id="app">
       @include('admin.partials.header')
 
-        <main class="">
-            @yield('content')
-        </main>
+      <main class="d-flex">
+        @auth
+          @include('admin.partials.menu')
+        @endauth
+
+        @yield('content')
+      </main>
     </div>
 </body>
 
