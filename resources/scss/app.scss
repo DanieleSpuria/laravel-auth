@@ -4,8 +4,18 @@
 
   height: calc(100vh - 56px);
 
-  li {
-    list-style: none;
-    cursor: pointer;
+  ul {
+
+    padding: 0;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 }

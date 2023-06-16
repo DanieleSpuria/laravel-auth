@@ -1,7 +1,7 @@
-<div class="ds-menu bg-dark text-white p-5">
+<div class="ds-menu bg-dark text-white px-4">
   <ul>
-    <li href="{{ route('admin.home') }}" class="my-2">Dashboard</li>
-    <li class="my-2">List</li>
+    <li class="my-2"><a href="{{ route('admin.home') }}">Dashboard</a></li>
+    <li class="my-2"><a href="{{ route('admin.projects.index') }}">List</a></li>
     <li class="my-2">Add</li>
   </ul>
 </div>

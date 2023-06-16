@@ -1,7 +1,7 @@
 <header class="bg-dark text-white">
   <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+        <a class="navbar-brand d-flex align-items-center" href="{{ route('admin.home') }}">
             <div class="logo_laravel">
               LOGO
             </div>
