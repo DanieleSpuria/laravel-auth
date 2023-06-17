@@ -24,5 +24,8 @@
         @endforeach
       </tbody>
     </table>
+    <div class="ds-link">
+      {{ $projects->links() }}
+    </div>
   </div>
 @endsection
