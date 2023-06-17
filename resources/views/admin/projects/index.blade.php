@@ -8,6 +8,7 @@
           <th scope="col">Id</th>
           <th scope="col">Title</th>
           <th scope="col">Date</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -16,6 +17,9 @@
             <td>{{ $project->id }}</td>
             <td>{{ $project->title }}</td>
             <td>{{ $project->date }}</td>
+            <td>
+              <a class="btn btn-primary" href="{{ route('admin.projects.show', $project) }}">View</a>
+            </td>
           </tr>
         @endforeach
       </tbody>

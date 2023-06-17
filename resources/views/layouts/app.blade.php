@@ -28,7 +28,9 @@
           @include('admin.partials.menu')
         @endauth
 
-        @yield('content')
+        <div class="ds-dash w-100">
+          @yield('content')
+        </div>
       </main>
     </div>
 </body>
