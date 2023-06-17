@@ -18,7 +18,7 @@
       @csrf
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Enter title...">
+        <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Enter title..." value="{{ old('title') }}">
         @error('title')
           <div class="text-danger">{{ $message }}</div>
 			  @enderror
@@ -26,7 +26,7 @@
 
       <div class="mb-3">
         <label for="date" class="form-label">Date</label>
-        <input type="date" class="form-control @error('date') is-invalid @enderror" id="date" name="date">
+        <input type="date" class="form-control @error('date') is-invalid @enderror" id="date" name="date" value="{{ old('date') }}">
         @error('date')
           <div class="text-danger">{{ $message }}</div>
 			  @enderror
@@ -34,7 +34,7 @@
 
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" cols="30" rows="10" placeholder="Write a description of your project..."></textarea>
+        <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" cols="30" rows="10" placeholder="Write a description of your project...">{{ old('description') }}</textarea>
         @error('description')
           <div class="text-danger">{{ $message }}</div>
 			  @enderror
