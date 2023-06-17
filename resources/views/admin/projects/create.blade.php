@@ -17,8 +17,8 @@
       </div>
 
       <div class="mb-3">
-        <label for="descriprion" class="form-label">Description</label>
-        <textarea class="form-control" name="descriprion" id="descriprion" cols="30" rows="10" placeholder="Write a description of your project..."></textarea>
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Write a description of your project..."></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -27,10 +27,10 @@
 
   <script>
     ClassicEditor
-        .create( document.querySelector( '#descriprion' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
+      .create( document.querySelector( '#descriprion' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+  </script>
 
 @endsection
