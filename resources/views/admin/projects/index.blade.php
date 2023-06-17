@@ -2,6 +2,12 @@
 
 @section('content')
   <div class="container m-3">
+    @if (session('deleted'))
+      <div class="alert alert-danger">
+        {{ session('deleted') }}
+      </div>
+    @endif
+
     <table class="table table-hover">
       <thead>
         <tr>
