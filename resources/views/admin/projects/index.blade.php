@@ -20,6 +20,11 @@
             <td>
               <a class="btn btn-primary" href="{{ route('admin.projects.show', $project) }}">View</a>
               <a class="btn btn-warning" href="{{ route('admin.projects.edit', $project) }}">Edit</a>
+              <form class="d-inline" action="{{ route('admin.projects.destroy', $project) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this project?')">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">Delete</button>
+              </form>
             </td>
           </tr>
         @endforeach
