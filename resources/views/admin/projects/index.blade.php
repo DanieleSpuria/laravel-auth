@@ -19,6 +19,7 @@
             <td>{{ $project->date }}</td>
             <td>
               <a class="btn btn-primary" href="{{ route('admin.projects.show', $project) }}">View</a>
+              <a class="btn btn-warning" href="{{ route('admin.projects.edit', $project) }}">Edit</a>
             </td>
           </tr>
         @endforeach
