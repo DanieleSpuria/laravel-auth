@@ -48,8 +48,6 @@ class ProjectController extends Controller
         $form_data['image_path'] = Storage::put('uploads', $form_data['image']);
       }
 
-      dd($form_data);
-
       $new_project = new Project();
       $new_project->fill($form_data);
       $new_project->save();
