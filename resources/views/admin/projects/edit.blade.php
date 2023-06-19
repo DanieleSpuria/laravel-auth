@@ -14,7 +14,7 @@
       </div>
     @endif
 
-    <form action="{{ route('admin.projects.update', $project) }}" method="POST">
+    <form action="{{ route('admin.projects.update', $project) }}" method="POST" enctype="multipart/form-data">
       @csrf
       @method('PUT')
       <div class="mb-3">
@@ -31,6 +31,12 @@
         @error('date')
           <div class="text-danger">{{ $message }}</div>
 			  @enderror
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" class="form-control" id="image" name="image" onchange="showImage(event)">
+        <img width="500" id="prev-image" src="" class="my-4">
       </div>
 
       <div class="mb-3">
@@ -51,6 +57,11 @@
       .catch( error => {
           console.error( error );
       } );
+
+    function showImage(event) {
+      const tagImage = document.getElementById('prev-image');
+      tagImage.src = URL.createObjectURL(event.target.files[0]);
+    }
   </script>
 
 @endsection
